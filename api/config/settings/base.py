@@ -29,7 +29,17 @@ DJANGO_APPS = [
 ]
 
 THIRD_PARTY_APPS=[
-    "rest_framework","django_countries", "phonenumber_field","drf_yasg", "djoser", "social_django", "taggit", "django_filters", "djcelery_email", "cloudinary","django_celery_beat",
+    "rest_framework",
+    "django_countries",
+    "phonenumber_field",
+    "drf_yasg", 
+    "djoser", 
+    "social_django", 
+    "taggit", 
+    "django_filters", 
+    "djcelery_email", 
+    "cloudinary",
+    "django_celery_beat",
 ]
 
 LOCAL_APPS=[
@@ -144,3 +154,5 @@ STATIC_ROOT = str(BASE_DIR / "staticfiles")
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 TAGGIT_CASE_INSENSITIVE = True
+
+AUTH_USER_MODEL = "users.User"

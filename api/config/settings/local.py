@@ -1,5 +1,3 @@
-
-from pathlib import Path
 from os import getenv,path
 
 from dotenv import load_dotenv

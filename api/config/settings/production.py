@@ -16,9 +16,9 @@ if path.isfile(local_env_file):
 
 SECRET_KEY = getenv("DJANGO_SECRET_KEY",)
 
-# SECURITY WARNING: don't run with debug turned on in production!
+ADMIN_URL = getenv("DJANGO_ADMIN_URL")
 
 
 ALLOWED_HOSTS = []
 
-ADMIN=[("harunayuki")]
+ADMINS=[("harunayuki","harunayuki0712@gmail.com")]
