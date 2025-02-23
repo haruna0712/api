@@ -13,7 +13,7 @@ class ProfileSerializer(serializers.ModelSerializer):
     country_of_origin = CountryField(name_only=True)
     avatar = serializers.SerializerMethodField()
     date_joined = serializers.DateTimeField(source="user.date_joined", read_only=True)
-    # apartment = serializers.SerializerMethodField()
+    apartment = serializers.SerializerMethodField()
     # average_rating = serializers.SerializerMethodField()
 
     class Meta:
@@ -33,7 +33,7 @@ class ProfileSerializer(serializers.ModelSerializer):
             "reputation",
             "date_joined",
             "avatar",
-            # "apartment",
+            "apartment",
             # "average_rating",
         ]
 
@@ -46,11 +46,11 @@ class ProfileSerializer(serializers.ModelSerializer):
     # def get_average_rating(self, obj: Profile):
     #     return obj.get_average_rating()
 
-    # def get_apartment(self, obj: Profile) -> None:
-    #     apartment = obj.user.apartment.first()
-    #     if apartment:
-    #         return ApartmentSerializer(apartment).data
-    #     return None
+    def get_apartment(self, obj: Profile) -> None:
+        apartment = obj.user.apartment.first()
+        if apartment:
+            return ApartmentSerializer(apartment).data
+        return None
 
 
 class UpdateProfileSerializer(serializers.ModelSerializer):
