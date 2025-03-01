@@ -34,7 +34,7 @@ class ProfileSerializer(serializers.ModelSerializer):
             "date_joined",
             "avatar",
             "apartment",
-            # "average_rating",
+            "average_rating",
         ]
 
     def get_avatar(self, obj: Profile) -> str | None:
@@ -43,8 +43,8 @@ class ProfileSerializer(serializers.ModelSerializer):
         except AttributeError:
             return None
 
-    # def get_average_rating(self, obj: Profile):
-    #     return obj.get_average_rating()
+    def get_average_rating(self, obj: Profile):
+        return obj.get_average_rating()
 
     def get_apartment(self, obj: Profile) -> None:
         apartment = obj.user.apartment.first()
