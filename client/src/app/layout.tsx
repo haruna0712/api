@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import React from "react"
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${openSans.variable} ${robotoSlab.variable}`}>{children}</body>
+      <body className={`${openSans.variable} ${robotoSlab.variable}`}>
+      <ThemeProvider attribute="class" defaultTheme= "system" enableSystem disableTransitionOnChange>{children}</ThemeProvider>
+      </body>
+
     </html>
   );
 }
