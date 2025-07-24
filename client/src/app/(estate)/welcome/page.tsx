@@ -12,6 +12,7 @@ export default function WelcomePage() {
 		// <>
 		// 	<PostCard />
 		// </>
-        <div>welcome</div>
+		
+        <div><h1 className="dark:text-pumpkin text-6xl">welcome</h1></div>
 	);
 }

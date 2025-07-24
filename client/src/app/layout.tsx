@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import React from "react"
 import { ThemeProvider } from "@/components/theme-provider";
+import ReduxProvider from "@/lib/redux/provider"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${openSans.variable} ${robotoSlab.variable}`}>
+      <ReduxProvider>
       <ThemeProvider attribute="class" defaultTheme= "system" enableSystem disableTransitionOnChange>{children}</ThemeProvider>
+      </ReduxProvider>
       </body>
 
     </html>
