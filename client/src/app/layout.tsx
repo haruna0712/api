@@ -5,6 +5,7 @@ import "./globals.css";
 import React from "react"
 import { ThemeProvider } from "@/components/theme-provider";
 import ReduxProvider from "@/lib/redux/provider"
+import Toast from "@/components/shared/Toast"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${openSans.variable} ${robotoSlab.variable}`}>
+        <Toast/>
       <ReduxProvider>
       <ThemeProvider attribute="class" defaultTheme= "system" enableSystem disableTransitionOnChange>{children}</ThemeProvider>
       </ReduxProvider>
