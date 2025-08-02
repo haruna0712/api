@@ -14,7 +14,7 @@ class ProfileSerializer(serializers.ModelSerializer):
     avatar = serializers.SerializerMethodField()
     date_joined = serializers.DateTimeField(source="user.date_joined", read_only=True)
     apartment = serializers.SerializerMethodField()
-    # average_rating = serializers.SerializerMethodField()
+    average_rating = serializers.SerializerMethodField()
 
     class Meta:
         model = Profile
