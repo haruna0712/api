@@ -1,5 +1,4 @@
-"use client";
-// import TenantCard from "@/components/cards/TenantCard";
+import TenantCard from "@/components/cards/TenantCard";
 import ProtectedRoute from "@/components/shared/ProtectedRoutes";
 
 import type { Metadata } from "next";
@@ -13,8 +12,7 @@ export const metadata: Metadata = {
 function TenantsPageContent() {
 	return (
 		<div>
-			{/* <TenantCard /> */}
-			<h1>tenants</h1>
+			<TenantCard />
 		</div>
 	);
 }
