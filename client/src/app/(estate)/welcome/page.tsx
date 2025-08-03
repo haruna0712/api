@@ -1,4 +1,4 @@
-// import PostCard from "@/components/cards/PostCard";
+import PostCard from "@/components/cards/PostCard";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -9,10 +9,8 @@ export const metadata: Metadata = {
 
 export default function WelcomePage() {
 	return (
-		// <>
-		// 	<PostCard />
-		// </>
-		
-        <div><h1 className="dark:text-pumpkin text-6xl">welcome</h1></div>
+		<>
+			<PostCard />
+		</>
 	);
 }
